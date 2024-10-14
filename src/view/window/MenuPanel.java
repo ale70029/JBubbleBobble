@@ -38,7 +38,7 @@ public class MenuPanel extends JPanel{
 	
 	private void addTitle(GridBagConstraints gbc) {
 		JLabel title = new JLabel("<html><div align='center'>JBubble<br>Bobble</html>");
-    	title.setFont(new Font("Arcade Interlaced", Font.TRUETYPE_FONT, MainFrame.screenSize.width/18));
+    	title.setFont(new Font("Arcade Interlaced", Font.TRUETYPE_FONT, MainFrame.screenSize.width/15));
     	title.setForeground(Color.WHITE);
     	add(title,gbc);
 	}
