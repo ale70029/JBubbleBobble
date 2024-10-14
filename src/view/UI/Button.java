@@ -4,6 +4,8 @@ import java.awt.Color;
 import java.awt.Dimension;
 import java.awt.Font;
 import java.awt.Image;
+//import java.awt.event.FocusAdapter;
+//import java.awt.event.FocusEvent;
 import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
 
@@ -74,6 +76,19 @@ public class Button extends JButton{
 	                setIcon(hoverBg);
 	            }
 	        }); 
+	     
+	     
+//	     addFocusListener(new FocusAdapter() {
+//            @Override
+//            public void focusGained(FocusEvent e) {
+//            	 setIcon(hoverBg);
+//            }
+//
+//            @Override
+//            public void focusLost(FocusEvent e) {
+//            	 setIcon(normalBg);
+//            }
+//	      });
 	 }
 	 
 	 private ImageIcon resizeImage(String imagePath) {

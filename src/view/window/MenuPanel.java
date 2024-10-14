@@ -32,9 +32,6 @@ public class MenuPanel extends JPanel{
         gbc.anchor = GridBagConstraints.CENTER;
         gbc.insets = new Insets(10, 0, 10, 0);
         
-      //Title
-    	
-        
         addTitle(gbc);
         addButtons(gbc);
 	}
@@ -49,19 +46,24 @@ public class MenuPanel extends JPanel{
 	
 	private void addButtons(GridBagConstraints gbc) {
 		Button continueBtn = new Button("continue");
-		Button loadBtn = new Button("load");
-		Button newGameBtn = new Button("new game");
-		Button statsBtn = new Button("stats");
-		Button creditsBtn = new Button("credits");
-		Button exitBtn = new Button("exit");
-
-		
 		add(continueBtn,gbc);
+		
+		Button loadBtn = new Button("load");
 		add(loadBtn,gbc);
+		
+		Button newGameBtn = new Button("new game");
 		add(newGameBtn,gbc);
+		
+		Button statsBtn = new Button("stats");
 		add(statsBtn,gbc);
+		
+		Button creditsBtn = new Button("credits");
 		add(creditsBtn,gbc);
+		
+		Button exitBtn = new Button("exit");
 		add(exitBtn,gbc);
+		
+		newGameBtn.requestFocusInWindow();
 	}
 	
 	@Override
