@@ -1,1 +1,6 @@
+#Folders
 /bin/
+
+# Eclipse files
+.classpath
+.project
