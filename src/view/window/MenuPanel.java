@@ -27,26 +27,24 @@ public class MenuPanel extends JPanel{
 		setLayout(new GridBagLayout());
 		
     	GridBagConstraints gbc = new GridBagConstraints();
-    	
-      
-    	JLabel title = new JLabel("<html><div align='center'>JBubble<br>Bobble</html>");
-    	title.setFont(new Font("Arcade Interlaced", Font.TRUETYPE_FONT, MainFrame.screenSize.width/18));
-    	title.setForeground(Color.WHITE);
-
         gbc.gridx = 0;
         gbc.gridy = GridBagConstraints.RELATIVE;
         gbc.anchor = GridBagConstraints.CENTER;
         gbc.insets = new Insets(10, 0, 10, 0);
         
-        add(title,gbc);
+      //Title
+    	
+        
+        addTitle(gbc);
         addButtons(gbc);
 	}
 	
-	@Override
-    protected void paintComponent(Graphics g) {
-        super.paintComponent(g);
-        g.drawImage(MainFrame.background, 0, 0, getWidth(), getHeight(), this);
-    }
+	private void addTitle(GridBagConstraints gbc) {
+		JLabel title = new JLabel("<html><div align='center'>JBubble<br>Bobble</html>");
+    	title.setFont(new Font("Arcade Interlaced", Font.TRUETYPE_FONT, MainFrame.screenSize.width/18));
+    	title.setForeground(Color.WHITE);
+    	add(title,gbc);
+	}
 
 	
 	private void addButtons(GridBagConstraints gbc) {
@@ -64,8 +62,12 @@ public class MenuPanel extends JPanel{
 		add(statsBtn,gbc);
 		add(creditsBtn,gbc);
 		add(exitBtn,gbc);
-		
-		
-		
 	}
+	
+	@Override
+    protected void paintComponent(Graphics g) {
+        super.paintComponent(g);
+        g.drawImage(MainFrame.background, 0, 0, getWidth(), getHeight(), this);
+    }
+
 }
