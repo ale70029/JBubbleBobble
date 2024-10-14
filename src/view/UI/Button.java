@@ -45,7 +45,7 @@ public class Button extends JButton{
 	     setHorizontalTextPosition(CENTER);  
 	     setVerticalTextPosition(CENTER);    
 	     setForeground(Color.WHITE);
-	     setFont(new Font("Arcade Normal", Font.TRUETYPE_FONT, 20));
+	     setFont(new Font("Arcade Normal", Font.TRUETYPE_FONT, MainFrame.screenSize.width/100));
 	     
 	     addMouseListener(new MouseAdapter() {
 	            @Override
@@ -62,10 +62,10 @@ public class Button extends JButton{
 	            public void mousePressed(MouseEvent e) {
 	                setIcon(pressedBg);
 	                switch(text) {
-	                case "exit":
-	                	System.exit(0);
-	                default:
-	                	break;
+		                case "exit":
+		                	System.exit(0);
+		                default:
+		                	break;
 	                }
 	            }
 
@@ -82,6 +82,4 @@ public class Button extends JButton{
         Image scaledImage = image.getScaledInstance(btnWidth, btnHeight, Image.SCALE_SMOOTH);
         return new ImageIcon(scaledImage);
 	 }
-	 
-
 }

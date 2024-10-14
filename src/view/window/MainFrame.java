@@ -16,7 +16,7 @@ import javax.swing.JPanel;
 import java.io.File;
 import java.io.IOException;
 import java.util.ArrayList;
-import java.util.List;
+
 
 @SuppressWarnings("serial")
 public class MainFrame extends JFrame{
@@ -68,8 +68,9 @@ public class MainFrame extends JFrame{
     }
     
     private void loadFonts() {
-    	List<String> fonts= new ArrayList();
-    	fonts.add("src/resources/fonts/ARCADE_N.ttf");
+    	ArrayList<String> fonts= new ArrayList<String>();
+    	fonts.add("src/resources/fonts/ARCADE_N.ttf"); // "Arcade Normal"
+    	fonts.add("src/resources/fonts/ARCADE_I.ttf"); // "Arcade Interlaced"
     	
     	fonts.forEach(path -> {
             try {

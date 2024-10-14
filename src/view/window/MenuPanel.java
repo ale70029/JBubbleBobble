@@ -1,12 +1,13 @@
 package view.window;
 
 import java.awt.Color;
-import java.awt.Dimension;
+import java.awt.Font;
 import java.awt.Graphics;
 import java.awt.GridBagConstraints;
 import java.awt.GridBagLayout;
 import java.awt.Insets;
 
+import javax.swing.JLabel;
 import javax.swing.JPanel;
 
 import view.UI.Button;
@@ -27,19 +28,17 @@ public class MenuPanel extends JPanel{
 		
     	GridBagConstraints gbc = new GridBagConstraints();
     	
-    	// SPACER FOR TITLE
-		JPanel spacer = new JPanel();
-	    spacer.setPreferredSize(new Dimension(1, 100)); 
-	    spacer.setBackground(new Color(0, 0, 0, 0));
-	    gbc.gridx = 0;
-	    gbc.gridy = 0;
-	    gbc.weighty = 0; 
-	    add(spacer, gbc);  
+      
+    	JLabel title = new JLabel("<html><div align='center'>JBubble<br>Bobble</html>");
+    	title.setFont(new Font("Arcade Interlaced", Font.TRUETYPE_FONT, MainFrame.screenSize.width/18));
+    	title.setForeground(Color.WHITE);
 
         gbc.gridx = 0;
         gbc.gridy = GridBagConstraints.RELATIVE;
         gbc.anchor = GridBagConstraints.CENTER;
         gbc.insets = new Insets(10, 0, 10, 0);
+        
+        add(title,gbc);
         addButtons(gbc);
 	}
 	
