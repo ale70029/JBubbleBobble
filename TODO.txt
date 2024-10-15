@@ -1,0 +1,14 @@
+VIEW
+	- schermata di caricamento iniziale
+	
+	
+MODEL
+	- entita'
+		-player
+		-enemies
+	-items
+		-bubble
+		-collectables
+	
+CONTROLLER
+	-game engine

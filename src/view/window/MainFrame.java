@@ -1,6 +1,7 @@
 package view.window;
 
 import java.awt.CardLayout;
+import java.awt.Color;
 import java.awt.Dimension;
 import java.awt.Font;
 import java.awt.FontFormatException;
@@ -59,7 +60,6 @@ public class MainFrame extends JFrame{
       //Cards Panel
         JPanel cardsPanel =  new JPanel(new CardLayout());
     	frame.add(cardsPanel);
-    	
     	
     	cardsPanel.add(MenuPanel.getInstance());
 
